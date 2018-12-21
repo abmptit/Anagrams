@@ -14,52 +14,59 @@ We created 3 tests :
 
 ## GenerateAnagramsSample1
 Our input is these words (not sorted (shuffle))
-kinship
-pinkish
-enlist 
-inlets
-listen
-silent
-boaster
-boaters
-borates
-fresher
-refresh
-sinks
-skins
-knits
-stink
-rots
-sort
+kinship  
+pinkish  
+enlist  
+inlets  
+listen  
+silent  
+boaster  
+boaters  
+borates  
+fresher  
+refresh 
+sinks  
+skins  
+knits  
+stink  
+rots  
+sort  
 
 The expected output is :
-boaster boaters borates
-enlist inlets listen silent
-fresher refresh
-kinship pinkish
-knits stink
-rots sort
-sinks skins
+boaster boaters borates  
+enlist inlets listen silent  
+fresher refresh  
+kinship pinkish  
+knits stink  
+rots sort  
+sinks skins  
 
 ## GenerateAnagramsSample2
 Our input is these words (not sorted (shuffle))
-crepitus
-cuprites
-pictures
-piecrust
-paste pates
-peats
-septa
-spate
-tapes
-tepas
-punctilio
-unpolitic
-sunders
-undress
+crepitus  
+cuprites  
+pictures  
+piecrust  
+paste  
+pates  
+peats  
+septa  
+spate  
+tapes  
+tepas  
+punctilio  
+unpolitic  
+sunders  
+undress  
 
-The expected output is :
-crepitus cuprites pictures piecrust
-paste pates peats septa spate tapes tepas
-punctilio unpolitic
-sunders undress
+The expected output is :  
+crepitus cuprites pictures piecrust  
+paste pates peats septa spate tapes tepas  
+punctilio unpolitic  
+sunders undress  
+
+## GenerateAnagramsFromHugeFile
+Get the input from this file http://codekata.com/data/wordlist.txt  
+And generate the appropriate anagrams.
+
+

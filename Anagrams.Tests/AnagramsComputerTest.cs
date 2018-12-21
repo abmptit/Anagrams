@@ -38,6 +38,15 @@ namespace Anagrams.Tests
             Assert.Equal(result, expectedOutput);
         }
 
+        [Theory]
+        [InlineData("peter", "repet")]
+        [InlineData("azerty", "yteraz")]
+        public void IsAnagramTest(string word1, string word2)
+        {
+            var result = AnagramsComputer.IsAnagram(word1, word2);
+            Assert.True(result);
+        }
+
         [Fact]
         public void GenerateAnagramsSample2()
         {
@@ -90,7 +99,7 @@ namespace Anagrams.Tests
             List<string> expectedOutput = expectText.Split("\r\n").ToList();
 
             var result = wordList.GenerateAnagrams();
-            string contentResult = string.Join("<br/>\r\n", result);
+            string contentResult = string.Join("\r\n", result);
 
             //assert
             Assert.Equal(result, expectedOutput);

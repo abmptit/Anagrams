@@ -1,0 +1,2 @@
+# Anagrams
+Anagrams Kata

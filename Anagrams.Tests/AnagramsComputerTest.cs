@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Xunit;
+using Xunit.Sdk;
 
 namespace Anagrams.Tests
 {
@@ -63,14 +65,32 @@ namespace Anagrams.Tests
         }
 
         [Fact]
+        public void GenerateAnagramsFromFile()
+        {
+            string text = System.IO.File.ReadAllText(@"shortwordlist.txt");
+            List<string> wordList = text.Split("\r\n").ToList();
+            
+            string expectText = System.IO.File.ReadAllText(@"expectedresultshortwordlist.txt");
+            List<string> expectedOutput = expectText.Split("\r\n").ToList();
+
+            var result = wordList.GenerateAnagrams();
+            string contentResult = string.Join("<br/>\r\n", result);
+
+            //assert
+            Assert.Equal(result, expectedOutput);
+        }
+
+        [Fact]
         public void GenerateAnagramsFromHugeFile()
         {
             string text = System.IO.File.ReadAllText(@"wordlist.txt");
-            List<string> wordList = text.Split('\n').ToList();
+            List<string> wordList = text.Split("\r\n").ToList();
+
             string expectText = System.IO.File.ReadAllText(@"expectedresultwordlist.txt");
-            List<string> expectedOutput = expectText.Split('\n').ToList();
+            List<string> expectedOutput = expectText.Split("\r\n").ToList();
 
             var result = wordList.GenerateAnagrams();
+            string contentResult = string.Join("<br/>\r\n", result);
 
             //assert
             Assert.Equal(result, expectedOutput);
